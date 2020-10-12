@@ -3,6 +3,7 @@ import TodoRow from "./TodoRow";
 import TableHead from "./TableHead";
 import TableFoot from "./TableFoot";
 import useSortableTodos from "../hooks/useSortableTodos";
+import usePagination from "../hooks/usePagination";
 
 const Table = ({ todos, setTodos }) => {
   const [activeRow, setActiveRow] = useState(null);
@@ -16,7 +17,18 @@ const Table = ({ todos, setTodos }) => {
     return sortConfig.key === name ? sortConfig.direction : undefined;
   };
 
-  const todoRows = sortedTodos.map((todo, index) => (
+  const {
+    rowsPerPage,
+    startIndex,
+    endIndex,
+    handleChangeRowsPerPage,
+    handleNext,
+    handlePrev,
+  } = usePagination(todos.length, 5);
+
+  const paginatedSortedTodos = sortedTodos.slice(startIndex, endIndex);
+
+  const todoRows = paginatedSortedTodos.map((todo, index) => (
     <TodoRow
       key={index}
       index={index}
@@ -39,8 +51,13 @@ const Table = ({ todos, setTodos }) => {
         <tbody>{todoRows}</tbody>
         <tfoot>
           <TableFoot
-          // requestSort={requestSort}
-          // getClassNamesFor={getClassNamesFor}
+            rowsPerPage={rowsPerPage}
+            startIndex={startIndex}
+            endIndex={endIndex}
+            handleChangeRowsPerPage={handleChangeRowsPerPage}
+            handleNext={handleNext}
+            handlePrev={handlePrev}
+            todosLength={todos.length}
           />
         </tfoot>
       </table>

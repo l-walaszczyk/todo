@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlusSquare } from "@fortawesome/free-solid-svg-icons";
 import useForm from "../hooks/useForm.js";
 
-const Form = ({ todos, setTodos }) => {
+const Form = ({ setTodos }) => {
   const stateSchema = {
     taskName: { value: "", error: "" },
     taskPriority: { value: "", error: "" },
@@ -18,7 +18,7 @@ const Form = ({ todos, setTodos }) => {
       },
     },
     taskPriority: {
-      required: true,
+      required: false,
     },
   };
 
@@ -54,7 +54,6 @@ const Form = ({ todos, setTodos }) => {
         <div className="select-container">
           <select
             name="taskPriority"
-            required
             value={taskPriority}
             onChange={handleOnChange}
           >
