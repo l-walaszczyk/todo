@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import TodoRow from "./TodoRow";
 import TableHead from "./TableHead";
 import TableFoot from "./TableFoot";
@@ -6,8 +6,6 @@ import useSortableTodos from "../hooks/useSortableTodos";
 import usePagination from "../hooks/usePagination";
 
 const Table = ({ todos, setTodos }) => {
-  const [activeRow, setActiveRow] = useState(null);
-
   const { sortedTodos, requestSort, sortConfig } = useSortableTodos(todos);
 
   const getClassNamesFor = (name) => {
@@ -29,14 +27,7 @@ const Table = ({ todos, setTodos }) => {
   const paginatedSortedTodos = sortedTodos.slice(startIndex, endIndex);
 
   const todoRows = paginatedSortedTodos.map((todo, index) => (
-    <TodoRow
-      key={index}
-      index={index}
-      todo={todo}
-      setTodos={setTodos}
-      activeRow={activeRow}
-      setActiveRow={setActiveRow}
-    />
+    <TodoRow key={index} index={index} todo={todo} setTodos={setTodos} />
   ));
 
   return (

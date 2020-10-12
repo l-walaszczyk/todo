@@ -273,22 +273,22 @@ table {
     }
    }
 
-   &.active {
-    background-color: #d1d1d1;
-   }
-
-   &.inactive {
-    button {
-     opacity: 0;
-    }
-   }
-
    button {
     display: block;
     padding: 0;
     color: #494430;
     background-color: transparent;
     border: none;
+    opacity: 0;
+    transition: 200ms;
+   }
+
+   &:hover, &:focus-within {
+     background-color: #d1d1d1;
+    
+    button {
+     opacity: 1;
+    }
    }
   }
  }
