@@ -22,7 +22,8 @@ const Form = ({ setTodos }) => {
     },
   };
 
-  function onSubmitForm(newTodo) {
+  function onSubmitForm(todo) {
+    const newTodo = { ...todo, taskDone: false };
     setTodos((prevTodos) => [...prevTodos, newTodo]);
   }
 

@@ -102,7 +102,6 @@ select {
     background-color: #fff;
 
     &:after {
-     // content: "\23F7";
      content: "";
      width: 0;
      height: 0;
@@ -131,8 +130,6 @@ select {
     height: 2.5rem;
     border: none;
     padding: 0;
-
-    // transition: color 200ms;
     text-align: center;
 
     &>* {
@@ -292,7 +289,6 @@ table {
     color: #494430;
     background-color: transparent;
     border: none;
-    // transition: color 200ms;
    }
   }
  }
@@ -358,7 +354,6 @@ table {
      border: none;
      background-color: transparent;
      padding: 0;
-     // transition: color 200ms;
     }
    }
   }
