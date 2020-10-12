@@ -58,7 +58,7 @@ select {
     font-size: 1rem;
     border: 1px solid #d1d1d1;
     transition: border-color 200ms;
-    color: #494430;
+    color: #000;
 
     &:focus,
     &:hover {
@@ -102,13 +102,18 @@ select {
     background-color: #fff;
 
     &:after {
-     content: "\23F7";
-     font-size: 1.4rem;
+     // content: "\23F7";
+     content: "";
+     width: 0;
+     height: 0;
+     border-left: 0.5rem solid transparent;
+     border-right: 0.5rem solid transparent;
+     border-top: 0.5rem solid;
      z-index: 1;
      display: block;
      position: absolute;
-     top: 4%;
-     right: 6%;
+     top: 40%;
+     right: 10%;
     }
 
     select {
@@ -304,13 +309,17 @@ table {
     height: 2.2rem;
 
     &:after {
-     content: "\23F7";
-     font-size: 1.4rem;
+     content: "";
+     width: 0;
+     height: 0;
+     border-left: 0.5rem solid transparent;
+     border-right: 0.5rem solid transparent;
+     border-top: 0.5rem solid;
      display: block;
      position: absolute;
      z-index: 1;
-     bottom: 18%;
-     right: 1%;
+     top: 40%;
+     right: 5%;
     }
 
     label {
