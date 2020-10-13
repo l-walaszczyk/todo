@@ -20,7 +20,7 @@ In the steps described below it will be assumed that you have [Git](https://git-
 
 ## Steps to build and run the project locally
 
-Follow the steps below to create your own local build. It is assumed that you have completed at least the steps 1-3 of the chapter above, [running the project in a development environment](#steps-to-run-the-project-in-a-development-environment).
+Follow the steps below to create your own local build. It is assumed that you have completed at least the steps 1-3 of the chapter above ([running the project in a development environment](#steps-to-run-the-project-in-a-development-environment)).
 
 1. Open a file `package.json` located in the root directory of the project.
 2. Change the `homepage` property (line 5) from `"https://l-walaszczyk.github.io/todo"` to `"."` (that change is required, because the project was configured to be deployed on GitHub Pages).
