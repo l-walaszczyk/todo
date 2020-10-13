@@ -15,9 +15,10 @@ const TodoRow = ({
   };
 
   const handleChecked = (event) => {
+    const { checked } = event.target;
     setTodos((prevTodos) => {
       const newTodos = [...prevTodos];
-      newTodos[initialIndex].taskDone = event.target.checked;
+      newTodos[initialIndex].taskDone = checked;
       return newTodos;
     });
   };

@@ -27,7 +27,7 @@ const Table = ({ todos, setTodos }) => {
   const paginatedSortedTodos = sortedTodos.slice(startIndex, endIndex);
 
   const todoRows = paginatedSortedTodos.map((todo, index) => (
-    <TodoRow key={index} index={index} todo={todo} setTodos={setTodos} />
+    <TodoRow key={index} todo={todo} setTodos={setTodos} />
   ));
 
   return (
