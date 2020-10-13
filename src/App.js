@@ -3,6 +3,7 @@ import Table from "./components/Table";
 import Form from "./components/Form";
 import "./App.scss";
 
+// initial 'todos' for testing pagination
 // const initialTodos = [
 //   { taskName: "01", taskPriority: "", taskDone: false },
 //   { taskName: "02", taskPriority: "", taskDone: false },
@@ -22,6 +23,7 @@ import "./App.scss";
 //   { taskName: "16", taskPriority: "", taskDone: false },
 // ];
 
+// initial 'todos' taken from the assignment
 const initialTodos = [
   { taskName: "Take out the trash", taskPriority: "1", taskDone: false },
   { taskName: "Feed the dog", taskPriority: "2", taskDone: true },
@@ -29,6 +31,9 @@ const initialTodos = [
   { taskName: "Send email to Peter", taskPriority: "0", taskDone: true },
   { taskName: "Buy groceries", taskPriority: "1", taskDone: false },
 ];
+
+// empty initial 'todos'
+// const initialTodos = [];
 
 const App = () => {
   const [todos, setTodos] = useState(

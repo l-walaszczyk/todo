@@ -6,15 +6,15 @@ A simple UI list that allows adding, sorting, checking and deleting tasks. Tasks
 
 You will need to have [Node v8.10 and npm v5.6 (or their later versions)](https://nodejs.org/en/) installed on your machine to run this project locally.
 
-In the steps described below it will be assumed that you have [git](https://git-scm.com/downloads) installed.
+In the steps described below it will be assumed that you have [Git](https://git-scm.com/downloads) installed.
 
 ## Steps to run the project localy
 
-- In your terminal go to the directory where you would like to store the project folder
-- Run `git clone https://github.com/l-walaszczyk/todo.git` and go to the `todo` folder
+- In your terminal go to the directory where you would like to store the project folder.
+- Run `git clone https://github.com/l-walaszczyk/todo.git` and go to the `todo` folder.
 - Run `npm install`. Installing can take a few minutes.
-- Run `npm start`. A development build will be compiled and a live server will launch
-- You should now be able see the application in your browser at [http://localhost:3000/todo](http://localhost:3000/todo)
+- Run `npm start`. A development build will be compiled and a live server will launch.
+- You should now be able see the application in your browser at [http://localhost:3000/todo](http://localhost:3000/todo).
 
 ## How to build the project
 
