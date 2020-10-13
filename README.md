@@ -2,6 +2,8 @@
 
 A simple UI list that allows adding, sorting, checking and deleting tasks. Tasks are stored in browser's local storage. Project bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Click [here](https://l-walaszczyk.github.io/todo/) to see a live demo.
+
 ## Requirements for running the project
 
 You will need to have [Node v8.10 and npm v5.6 (or their later versions)](https://nodejs.org/en/) installed on your machine to run this project locally.
